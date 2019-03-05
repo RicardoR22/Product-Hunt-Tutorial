@@ -56,7 +56,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tagline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7f-ui-WTb">
-                                                            <rect key="frame" x="0.0" y="213.5" width="345" height="14.5"/>
+                                                            <rect key="frame" x="8" y="213.5" width="329" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -70,11 +70,11 @@
                                                         <constraint firstAttribute="bottom" secondItem="t7f-ui-WTb" secondAttribute="bottom" id="5ji-pf-gak"/>
                                                         <constraint firstItem="NrQ-hp-Iea" firstAttribute="top" secondItem="kws-gt-emx" secondAttribute="bottom" constant="5.5" id="9ej-F0-xJr"/>
                                                         <constraint firstItem="kws-gt-emx" firstAttribute="leading" secondItem="fP8-zD-Ozg" secondAttribute="leading" constant="8" id="Ala-dA-eSI"/>
-                                                        <constraint firstAttribute="trailing" secondItem="t7f-ui-WTb" secondAttribute="trailing" id="V4t-LI-pZ7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="t7f-ui-WTb" secondAttribute="trailing" constant="8" id="V4t-LI-pZ7"/>
                                                         <constraint firstItem="NrQ-hp-Iea" firstAttribute="leading" secondItem="fP8-zD-Ozg" secondAttribute="leading" constant="8" id="WB2-on-4kr"/>
                                                         <constraint firstItem="dol-Ix-o9B" firstAttribute="top" secondItem="fP8-zD-Ozg" secondAttribute="top" constant="8" id="dvq-9T-8dA"/>
                                                         <constraint firstItem="dol-Ix-o9B" firstAttribute="leading" secondItem="kws-gt-emx" secondAttribute="trailing" constant="12" id="eDb-QI-IVX"/>
-                                                        <constraint firstItem="t7f-ui-WTb" firstAttribute="leading" secondItem="fP8-zD-Ozg" secondAttribute="leading" id="fge-dZ-SVf"/>
+                                                        <constraint firstItem="t7f-ui-WTb" firstAttribute="leading" secondItem="fP8-zD-Ozg" secondAttribute="leading" constant="8" id="fge-dZ-SVf"/>
                                                         <constraint firstAttribute="trailing" secondItem="dol-Ix-o9B" secondAttribute="trailing" constant="8" id="gFz-TD-BKj"/>
                                                         <constraint firstItem="t7f-ui-WTb" firstAttribute="top" secondItem="NrQ-hp-Iea" secondAttribute="bottom" constant="8" id="tBE-bM-Fj3"/>
                                                         <constraint firstItem="kws-gt-emx" firstAttribute="top" secondItem="fP8-zD-Ozg" secondAttribute="top" constant="8" id="uOZ-5A-QB6"/>
@@ -90,11 +90,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="commentLabel" destination="WYJ-IQ-LP3" id="UFP-kO-z1A"/>
+                                            <outlet property="commentsCountLabel" destination="WYJ-IQ-LP3" id="yct-rR-GW5"/>
                                             <outlet property="nameLabel" destination="kws-gt-emx" id="ohv-OM-LN4"/>
                                             <outlet property="previewImageView" destination="NrQ-hp-Iea" id="ggZ-e6-yy8"/>
                                             <outlet property="taglineLabel" destination="t7f-ui-WTb" id="8gH-c6-oB7"/>
-                                            <outlet property="voteLabel" destination="t5D-iM-k8v" id="m4Y-zD-v42"/>
+                                            <outlet property="votesCountLabel" destination="t5D-iM-k8v" id="a97-he-att"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
