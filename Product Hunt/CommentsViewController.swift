@@ -13,11 +13,16 @@ class CommentsViewController: UIViewController {
     
     @IBOutlet weak var commentsTableView: UITableView!
     
-    var comments: [String]! {
-        didSet{
-            
+    var comments: [Comment] = [] {
+        didSet {
+            commentsTableView.reloadData()
         }
     }
+    
+    var postID: Int!
+    
+    var networkManager = NetworkManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,18 @@ class CommentsViewController: UIViewController {
         // Do any additional setup after loading the view.
         commentsTableView.delegate = self
         commentsTableView.dataSource = self
+        updateComments()
+    }
+    
+    func updateComments() {
+        networkManager.getComments(postID) { result in
+            switch result {
+            case let .success(comments):
+                self.comments = comments
+            case let .failure(error):
+                print(error)
+            }
+        }
     }
     
 
@@ -40,7 +57,7 @@ extension CommentsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath) as! CommentTableViewCell
         
         let comment = comments[indexPath.row]
-        cell.commentTextView.text = comment
+        cell.commentTextView.text = comment.body
         return cell
     }
 }

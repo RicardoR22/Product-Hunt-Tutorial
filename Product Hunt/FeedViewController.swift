@@ -31,7 +31,12 @@ class FeedViewController: UIViewController {
 
     func updateFeed() {
         networkManager.getPosts() { result in
-            self.posts = result
+            switch result {
+            case let .success(posts):
+                self.posts = posts
+            case let .failure(error):
+                print(error)
+            }
         }
     }
 
@@ -66,11 +71,11 @@ extension FeedViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.row]
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let commentsView = storyboard.instantiateViewController(withIdentifier: "commentsView") as? CommentsViewController else {
+        
+        guard let commentsView = storyboard!.instantiateViewController(withIdentifier: "commentsView") as? CommentsViewController else {
             return
         }
-        commentsView.comments = ["Blah blah blah!", "Good app.", "Wow."]
+        commentsView.postID = post.id
         navigationController?.pushViewController(commentsView, animated: true)
     }
 }
