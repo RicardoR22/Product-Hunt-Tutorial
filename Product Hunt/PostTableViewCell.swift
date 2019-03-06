@@ -30,7 +30,21 @@ class PostTableViewCell: UITableViewCell {
     
     func updatePreviewImage() {
         guard let post = post else { return }
-        previewImageView.image = UIImage(named: "placeholder")
+        let url = post.previewImageURL
+        let request = URLRequest(url: url)
+        
+        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if error == nil {
+                let loadedImage = UIImage(data: data!)
+                
+                DispatchQueue.main.async {
+                    self.previewImageView.image = loadedImage
+                }
+            }
+        }
+        task.resume()
+        
     }
     
 }
