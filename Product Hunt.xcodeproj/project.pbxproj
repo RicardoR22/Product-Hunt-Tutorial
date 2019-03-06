@@ -15,6 +15,8 @@
 		8DC549CE222DE01400BD30D4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC549CD222DE01400BD30D4 /* Post.swift */; };
 		8DC549D0222DE6E900BD30D4 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC549CF222DE6E900BD30D4 /* PostTableViewCell.swift */; };
 		8DC549D2222F932300BD30D4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC549D1222F932200BD30D4 /* NetworkManager.swift */; };
+		8DC549D4222F97E700BD30D4 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC549D3222F97E700BD30D4 /* CommentsViewController.swift */; };
+		8DC549D6222F997200BD30D4 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC549D5222F997200BD30D4 /* CommentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		8DC549CD222DE01400BD30D4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8DC549CF222DE6E900BD30D4 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		8DC549D1222F932200BD30D4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8DC549D3222F97E700BD30D4 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		8DC549D5222F997200BD30D4 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				8DC549CD222DE01400BD30D4 /* Post.swift */,
 				8DC549CF222DE6E900BD30D4 /* PostTableViewCell.swift */,
 				8DC549D1222F932200BD30D4 /* NetworkManager.swift */,
+				8DC549D3222F97E700BD30D4 /* CommentsViewController.swift */,
+				8DC549D5222F997200BD30D4 /* CommentTableViewCell.swift */,
 			);
 			path = "Product Hunt";
 			sourceTree = "<group>";
@@ -146,7 +152,9 @@
 			files = (
 				8DC549CE222DE01400BD30D4 /* Post.swift in Sources */,
 				8DC549BE222DC40800BD30D4 /* FeedViewController.swift in Sources */,
+				8DC549D4222F97E700BD30D4 /* CommentsViewController.swift in Sources */,
 				8DC549D2222F932300BD30D4 /* NetworkManager.swift in Sources */,
+				8DC549D6222F997200BD30D4 /* CommentTableViewCell.swift in Sources */,
 				8DC549BC222DC40800BD30D4 /* AppDelegate.swift in Sources */,
 				8DC549D0222DE6E900BD30D4 /* PostTableViewCell.swift in Sources */,
 			);

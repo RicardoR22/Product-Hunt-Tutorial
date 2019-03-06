@@ -118,6 +118,64 @@
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
+        <!--Comments-->
+        <scene sceneID="4zb-ZA-5Hu">
+            <objects>
+                <viewController storyboardIdentifier="commentsView" id="0nX-hg-DXd" userLabel="Comments" customClass="CommentsViewController" customModule="Product_Hunt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eLi-vR-y4Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w8M-JR-96r" userLabel="Comments Table View">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="125" id="AcV-2W-BrX" customClass="CommentTableViewCell" customModule="Product_Hunt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="125"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AcV-2W-BrX" id="wa3-bC-TRX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mht-1i-0Xp">
+                                                    <rect key="frame" x="15" y="15" width="345" height="94.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mht-1i-0Xp" secondAttribute="bottom" constant="15" id="Afg-Su-KtI"/>
+                                                <constraint firstItem="mht-1i-0Xp" firstAttribute="top" secondItem="wa3-bC-TRX" secondAttribute="top" constant="15" id="JuD-qj-lpQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="mht-1i-0Xp" secondAttribute="trailing" constant="15" id="m2l-uW-PZx"/>
+                                                <constraint firstItem="mht-1i-0Xp" firstAttribute="leading" secondItem="wa3-bC-TRX" secondAttribute="leading" constant="15" id="ve8-LD-1xh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentTextView" destination="mht-1i-0Xp" id="p1L-pC-DRT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w8M-JR-96r" firstAttribute="top" secondItem="u99-h8-tnl" secondAttribute="top" id="DmI-Cv-lca"/>
+                            <constraint firstItem="u99-h8-tnl" firstAttribute="trailing" secondItem="w8M-JR-96r" secondAttribute="trailing" id="bJW-7V-b1Q"/>
+                            <constraint firstItem="w8M-JR-96r" firstAttribute="leading" secondItem="u99-h8-tnl" secondAttribute="leading" id="s2O-et-l7g"/>
+                            <constraint firstItem="u99-h8-tnl" firstAttribute="bottom" secondItem="w8M-JR-96r" secondAttribute="bottom" id="zYn-8f-nOq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u99-h8-tnl"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentsTableView" destination="w8M-JR-96r" id="3vr-WV-Wnv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fu9-e8-ef2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="134"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="djj-W0-akq">
             <objects>
